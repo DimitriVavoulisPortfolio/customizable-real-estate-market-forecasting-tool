@@ -17,15 +17,18 @@ This project provides a customizable real estate market forecasting tool that us
 
 1. **models**: Pre-trained SARIMA models for each geographic level
 2. **state-documentation**: Documentation and guides for each state model
-3. **state-outputs**: Forecast outputs and visualizations for each state
-4. **state-scripts**: Data processing, model training, and forecasting scripts for each state
-5. **README.md**: Overview and guide to using the forecasting tool
-6. **ZHVI.csv**: Zillow Home Value Index dataset used for training and forecasting
+3. **state-outputs**: Forecast outputs and visualizations for each state 
+4. **state-scripts**: Data processing and model training scripts for each state
+5. **output-scripts**: Ready to use, double click them and input how many months forward
+6. **PROCESS.md**: Detailed explanation of the data processing and model training pipeline
+7. **MODEL.md**: In-depth description of the SARIMA model architecture and hyperparameters
+8. **README.md**: Overview and guide to using the forecasting tool
+9. **ZHVI.csv**: Zillow Home Value Index dataset used for training and forecasting
 
 ## Documentation
 
 - **README.md**: This file, providing an overview of the project and its usage
-- **state-documentation**: Detailed documentation for each state model, including customization instructions and interpreting outputs
+- **state-documentation**: Detailed documentation for each state model
 - **PROCESS.md**: Detailed explanation of the data processing and model training pipeline
 - **MODEL.md**: In-depth description of the SARIMA model architecture and hyperparameters
 

@@ -4,6 +4,8 @@
 
 This project is a customizable real estate market forecasting tool that uses SARIMA (Seasonal AutoRegressive Integrated Moving Average) models to predict Zillow Home Value Index (ZHVI) trends at different geographical levels, such as states and cities. This tool already includes ready-to-use models with predictions for the next 11 months as of 10/06/2024 for 10 states including New York, California and Texas, the dataset is updated monthly, reducing maintenance.
 
+![New York test Screenshot](/state-documentation/New York/New York_zhvi_forecast_2024_onwards.png)
+
 ### Key Features
 
 - Customizable SARIMA models for forecasting ZHVI trends

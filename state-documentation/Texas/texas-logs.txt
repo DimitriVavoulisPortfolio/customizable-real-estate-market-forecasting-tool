@@ -1,0 +1,97 @@
+PS C:\Users\dimit> & C:/Users/dimit/AppData/Local/Microsoft/WindowsApps/python3.9.exe c:/Github-uploading/customizable-real-estate-market-forecasting-tool/texas-zhvi-sarima.py
+[2024-10-05 20:37:02] Loading dataset...
+[2024-10-05 20:37:02] Preprocessing data...
+[2024-10-05 20:37:02] Running Auto ARIMA...
+[2024-10-05 20:37:41]                                       SARIMAX Results
+===========================================================================================
+Dep. Variable:                                   y   No. Observations:                  296
+Model:             SARIMAX(1, 2, 3)x(1, 0, [], 12)   Log Likelihood               -2038.761
+Date:                             Sat, 05 Oct 2024   AIC                           4089.523
+Time:                                     20:37:41   BIC                           4111.624
+Sample:                                 01-01-2000   HQIC                          4098.374
+                                      - 08-01-2024
+Covariance Type:                               opg
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+ar.L1          0.9053      0.021     44.123      0.000       0.865       0.946
+ma.L1         -0.4939      0.025    -19.526      0.000      -0.543      -0.444
+ma.L2         -0.1497      0.018     -8.176      0.000      -0.186      -0.114
+ma.L3         -0.3072      0.015    -20.081      0.000      -0.337      -0.277
+ar.S.L12       0.0998      0.027      3.676      0.000       0.047       0.153
+sigma2      3.444e+04   1248.272     27.589      0.000     3.2e+04    3.69e+04
+===================================================================================
+Ljung-Box (L1) (Q):                  38.08   Jarque-Bera (JB):              2311.26
+Prob(Q):                              0.00   Prob(JB):                         0.00
+Heteroskedasticity (H):               2.46   Skew:                             0.07
+Prob(H) (two-sided):                  0.00   Kurtosis:                        16.74
+===================================================================================
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
+[2024-10-05 20:37:41] Model saved as Texas_auto_arima_model.joblib
+[2024-10-05 20:37:41] Fitting SARIMA model...
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            6     M =           10
+ This problem is unconstrained.
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f=  7.25388D+00    |proj g|=  9.88020D-01
+
+At iterate    5    f=  6.92213D+00    |proj g|=  3.03568D-01
+
+At iterate   10    f=  6.88961D+00    |proj g|=  4.69821D-03
+
+At iterate   15    f=  6.88851D+00    |proj g|=  1.36763D-02
+
+At iterate   20    f=  6.88776D+00    |proj g|=  9.40545D-04
+
+At iterate   25    f=  6.88776D+00    |proj g|=  3.48628D-04
+
+At iterate   30    f=  6.88775D+00    |proj g|=  1.16270D-02
+
+At iterate   35    f=  6.88771D+00    |proj g|=  1.14615D-04
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+    6     36     41      1     0     0   7.928D-05   6.888D+00
+  F =   6.8877075529925857
+
+CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+[2024-10-05 20:37:42] Model saved as Texas_sarima_model.joblib
+[2024-10-05 20:37:42] Generating predictions...
+[2024-10-05 20:37:42] 2024 Onwards MAPE: 0.0010
+[2024-10-05 20:37:42] 2024 Onwards RMSE: 322.99
+[2024-10-05 20:37:42] 2024 Onwards R-squared: 0.8341
+[2024-10-05 20:37:42] Saving forecast to CSV...
+[2024-10-05 20:37:42] Forecast for the next 12 months after available data:
+[2024-10-05 20:37:42] 2024-09-01    301316.739273
+2024-10-01    301121.769640
+2024-11-01    300970.591448
+2024-12-01    300871.008998
+2025-01-01    300869.284495
+2025-02-01    300965.287706
+2025-03-01    301169.177394
+2025-04-01    301413.846749
+2025-05-01    301644.501691
+2025-06-01    301853.749480
+2025-07-01    302061.647423
+2025-08-01    302312.548555
+Freq: MS, Name: predicted_mean, dtype: float64
+PS C:\Users\dimit> 

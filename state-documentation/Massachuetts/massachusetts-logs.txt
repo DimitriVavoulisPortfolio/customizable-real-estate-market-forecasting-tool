@@ -1,0 +1,91 @@
+PS C:\Users\dimit> & C:/Users/dimit/AppData/Local/Microsoft/WindowsApps/python3.9.exe c:/Github-uploading/customizable-real-estate-market-forecasting-tool/massachusetts-zhvi-sarima.py
+[2024-10-05 22:52:31] Loading dataset...
+[2024-10-05 22:52:31] Preprocessing data...
+[2024-10-05 22:52:31] Running Auto ARIMA...
+[2024-10-05 22:52:33]                                SARIMAX Results
+==============================================================================
+Dep. Variable:                      y   No. Observations:                  296
+Model:               SARIMAX(1, 2, 0)   Log Likelihood               -2367.655
+Date:                Sat, 05 Oct 2024   AIC                           4739.310
+Time:                        22:52:33   BIC                           4746.677
+Sample:                    01-01-2000   HQIC                          4742.260
+                         - 08-01-2024
+Covariance Type:                  opg
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+ar.L1          0.0343      0.005      6.925      0.000       0.025       0.044
+sigma2      5.628e+05   2.14e+04     26.270      0.000    5.21e+05    6.05e+05
+===================================================================================
+Ljung-Box (L1) (Q):                 133.42   Jarque-Bera (JB):               721.03
+Prob(Q):                              0.00   Prob(JB):                         0.00
+Heteroskedasticity (H):              10.36   Skew:                            -0.53
+Prob(H) (two-sided):                  0.00   Kurtosis:                        10.60
+===================================================================================
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
+[2024-10-05 22:52:33] Model saved as Massachusetts_auto_arima_model.joblib
+[2024-10-05 22:52:33] Fitting SARIMA model...
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            2     M =           10
+ This problem is unconstrained.
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f=  1.08415D+01    |proj g|=  3.43105D+00
+
+At iterate    5    f=  8.09339D+00    |proj g|=  1.64482D-03
+
+At iterate   10    f=  8.09333D+00    |proj g|=  4.21300D-02
+
+At iterate   15    f=  8.08641D+00    |proj g|=  4.48666D-01
+
+At iterate   20    f=  7.99911D+00    |proj g|=  5.66779D-02
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+    2     24     36      1     0     0   6.060D-05   7.999D+00
+  F =   7.9988344831399063
+
+CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+
+ Warning:  more than 10 function and gradient
+   evaluations in the last line search.  Termination
+   may possibly be caused by a bad search direction.
+[2024-10-05 22:52:33] Model saved as Massachusetts_sarima_model.joblib
+[2024-10-05 22:52:33] Generating predictions...
+[2024-10-05 22:52:33] 2024 Onwards MAPE: 0.0015
+[2024-10-05 22:52:33] 2024 Onwards RMSE: 1079.29
+[2024-10-05 22:52:33] 2024 Onwards R-squared: 0.9811
+[2024-10-05 22:52:33] Saving forecast to CSV...
+[2024-10-05 22:52:33] Forecast for the next 12 months after available data:
+[2024-10-05 22:52:33] 2024-09-01    631129.105444
+2024-10-01    633260.213351
+2024-11-01    635391.329059
+2024-12-01    637522.445035
+2025-01-01    639653.561020
+2025-02-01    641784.677005
+2025-03-01    643915.792990
+2025-04-01    646046.908975
+2025-05-01    648178.024961
+2025-06-01    650309.140946
+2025-07-01    652440.256931
+2025-08-01    654571.372917
+Freq: MS, Name: predicted_mean, dtype: float64
+PS C:\Users\dimit> 

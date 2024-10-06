@@ -1,0 +1,101 @@
+PS C:\Users\dimit> & C:/Users/dimit/AppData/Local/Microsoft/WindowsApps/python3.9.exe c:/Github-uploading/customizable-real-estate-market-forecasting-tool/california-zhvi-sarima.py
+[2024-10-05 20:07:26] Loading dataset...
+[2024-10-05 20:07:26] Preprocessing data...
+[2024-10-05 20:07:26] Running Auto ARIMA...
+[2024-10-05 20:07:47]                                SARIMAX Results
+==============================================================================
+Dep. Variable:                      y   No. Observations:                  296
+Model:               SARIMAX(1, 1, 1)   Log Likelihood               -2839.883
+Date:                Sat, 05 Oct 2024   AIC                           5687.766
+Time:                        20:07:47   BIC                           5702.513
+Sample:                    01-01-2000   HQIC                          5693.671
+                         - 08-01-2024
+Covariance Type:                  opg
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+intercept    335.2492     78.168      4.289      0.000     182.044     488.455
+ar.L1          0.8227      0.026     31.740      0.000       0.772       0.874
+ma.L1         -0.7363      0.029    -25.391      0.000      -0.793      -0.679
+sigma2      1.278e+07      0.002   6.23e+09      0.000    1.28e+07    1.28e+07
+===================================================================================
+Ljung-Box (L1) (Q):                 241.21   Jarque-Bera (JB):               129.48
+Prob(Q):                              0.00   Prob(JB):                         0.00
+Heteroskedasticity (H):               1.16   Skew:                            -0.76
+Prob(H) (two-sided):                  0.45   Kurtosis:                         5.87
+===================================================================================
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
+[2] Covariance matrix is singular or near-singular, with condition number 1.73e+25. Standard errors may be unstable.
+[2024-10-05 20:07:47] Model saved as California_auto_arima_model.joblib
+[2024-10-05 20:07:47] Fitting SARIMA model...
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            3     M =           10
+ This problem is unconstrained.
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f=  4.60626D+01    |proj g|=  1.75065D+00
+  ys=-1.782E+00  -gs= 5.433E-01 BFGS update SKIPPED
+
+At iterate    5    f=  1.93445D+01    |proj g|=  2.59800D+00
+
+At iterate   10    f=  1.65056D+01    |proj g|=  1.53269D+01
+
+At iterate   15    f=  1.39740D+01    |proj g|=  2.72188D-01
+
+At iterate   20    f=  1.39696D+01    |proj g|=  8.22243D-02
+
+At iterate   25    f=  1.39192D+01    |proj g|=  7.61994D-01
+
+At iterate   30    f=  9.90689D+00    |proj g|=  1.74686D-02
+
+At iterate   35    f=  9.73097D+00    |proj g|=  7.38819D-02
+
+At iterate   40    f=  9.61495D+00    |proj g|=  4.93199D-02
+
+At iterate   45    f=  9.61035D+00    |proj g|=  5.62306D-05
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+    3     46     85      1     1     0   1.016D-06   9.610D+00
+  F =   9.6103497409327048
+
+CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+[2024-10-05 20:07:48] Model saved as California_sarima_model.joblib
+[2024-10-05 20:07:48] Generating predictions...
+[2024-10-05 20:07:48] 2024 Onwards MAPE: 0.0019
+[2024-10-05 20:07:48] 2024 Onwards RMSE: 1752.07
+[2024-10-05 20:07:48] 2024 Onwards R-squared: 0.9184
+[2024-10-05 20:07:48] Saving forecast to CSV...
+[2024-10-05 20:07:48] Forecast for the next 12 months after available data:
+[2024-10-05 20:07:48] 2024-09-01    774524.965018
+2024-10-01    775594.488746
+2024-11-01    776578.882402
+2024-12-01    777484.922018
+2025-01-01    778318.844283
+2025-02-01    779086.389467
+2025-03-01    779792.840936
+2025-04-01    780443.061521
+2025-05-01    781041.526989
+2025-06-01    781592.356852
+2025-07-01    782099.342727
+2025-08-01    782565.974429
+Freq: MS, Name: predicted_mean, dtype: float64
+PS C:\Users\dimit> 

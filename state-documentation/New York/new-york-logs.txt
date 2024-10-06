@@ -1,0 +1,102 @@
+PS C:\Users\dimit> & C:/Users/dimit/AppData/Local/Microsoft/WindowsApps/python3.9.exe c:/Github-uploading/customizable-real-estate-market-forecasting-tool/new-york-zhvi-sarima.py
+[2024-10-05 20:29:10] Loading dataset...
+[2024-10-05 20:29:10] Preprocessing data...
+[2024-10-05 20:29:10] Running Auto ARIMA...
+[2024-10-05 20:29:45]                                SARIMAX Results
+==============================================================================
+Dep. Variable:                      y   No. Observations:                  296
+Model:               SARIMAX(2, 2, 2)   Log Likelihood               -2170.875
+Date:                Sat, 05 Oct 2024   AIC                           4351.749
+Time:                        20:29:45   BIC                           4370.167
+Sample:                    01-01-2000   HQIC                          4359.125
+                         - 08-01-2024
+Covariance Type:                  opg
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+ar.L1          1.7018      0.050     34.245      0.000       1.604       1.799
+ar.L2         -0.8726      0.052    -16.837      0.000      -0.974      -0.771
+ma.L1         -1.6621      0.056    -29.637      0.000      -1.772      -1.552
+ma.L2          0.8217      0.060     13.796      0.000       0.705       0.938
+sigma2       1.37e+05   6233.979     21.973      0.000    1.25e+05    1.49e+05
+===================================================================================
+Ljung-Box (L1) (Q):                  77.37   Jarque-Bera (JB):               669.47
+Prob(Q):                              0.00   Prob(JB):                         0.00
+Heteroskedasticity (H):               6.46   Skew:                            -0.73
+Prob(H) (two-sided):                  0.00   Kurtosis:                        10.25
+===================================================================================
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
+[2024-10-05 20:29:45] Model saved as New York_auto_arima_model.joblib
+[2024-10-05 20:29:45] Fitting SARIMA model...
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            5     M =           10
+ This problem is unconstrained.
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f=  8.49070D+00    |proj g|=  3.10048D+00
+
+At iterate    5    f=  7.40407D+00    |proj g|=  1.23779D-02
+
+At iterate   10    f=  7.40167D+00    |proj g|=  1.15273D-01
+
+At iterate   15    f=  7.40043D+00    |proj g|=  1.48532D-02
+
+At iterate   20    f=  7.38809D+00    |proj g|=  1.59923D-01
+
+At iterate   25    f=  7.36157D+00    |proj g|=  1.10226D-01
+
+At iterate   30    f=  7.35330D+00    |proj g|=  7.48241D-03
+
+At iterate   35    f=  7.35324D+00    |proj g|=  2.43321D-03
+
+At iterate   40    f=  7.35235D+00    |proj g|=  4.82158D-02
+
+At iterate   45    f=  7.33936D+00    |proj g|=  9.38448D-02
+
+At iterate   50    f=  7.33404D+00    |proj g|=  1.57964D-03
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+    5     50     65      1     0     0   1.580D-03   7.334D+00
+  F =   7.3340355146278142
+
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT
+[2024-10-05 20:29:46] Model saved as New York_sarima_model.joblib
+[2024-10-05 20:29:46] Generating predictions...
+[2024-10-05 20:29:46] 2024 Onwards MAPE: 0.0010
+[2024-10-05 20:29:46] 2024 Onwards RMSE: 527.50
+[2024-10-05 20:29:46] 2024 Onwards R-squared: 0.9943
+[2024-10-05 20:29:46] Saving forecast to CSV...
+[2024-10-05 20:29:46] Forecast for the next 12 months after available data:
+[2024-10-05 20:29:46] 2024-09-01    484904.063990
+2024-10-01    487992.534478
+2024-11-01    491009.467164
+2024-12-01    493942.049417
+2025-01-01    496793.513527
+2025-02-01    499580.541001
+2025-03-01    502328.699332
+2025-04-01    505066.941537
+2025-05-01    507822.227725
+2025-06-01    510615.172155
+2025-07-01    513457.329002
+2025-08-01    516350.371910
+Freq: MS, Name: predicted_mean, dtype: float64
+PS C:\Users\dimit> 

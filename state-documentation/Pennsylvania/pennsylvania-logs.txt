@@ -1,0 +1,91 @@
+PS C:\Users\dimit> & C:/Users/dimit/AppData/Local/Microsoft/WindowsApps/python3.9.exe c:/Github-uploading/customizable-real-estate-market-forecasting-tool/pennsylvania-zhvi-sarima.py
+[2024-10-05 23:15:47] Loading dataset...
+[2024-10-05 23:15:47] Preprocessing data...
+[2024-10-05 23:15:47] Running Auto ARIMA...
+[2024-10-05 23:15:51]                                SARIMAX Results
+==============================================================================
+Dep. Variable:                      y   No. Observations:                  296
+Model:               SARIMAX(2, 2, 1)   Log Likelihood               -2045.909
+Date:                Sat, 05 Oct 2024   AIC                           4099.819
+Time:                        23:15:51   BIC                           4114.553
+Sample:                    01-01-2000   HQIC                          4105.719
+                         - 08-01-2024
+Covariance Type:                  opg
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+ar.L1          1.2298      0.032     38.763      0.000       1.168       1.292
+ar.L2         -0.4520      0.014    -32.033      0.000      -0.480      -0.424
+ma.L1         -0.8460      0.038    -22.036      0.000      -0.921      -0.771
+sigma2      4.063e+04   1913.191     21.234      0.000    3.69e+04    4.44e+04
+===================================================================================
+Ljung-Box (L1) (Q):                  26.96   Jarque-Bera (JB):              1120.27
+Prob(Q):                              0.00   Prob(JB):                         0.00
+Heteroskedasticity (H):               3.28   Skew:                             0.22
+Prob(H) (two-sided):                  0.00   Kurtosis:                        12.55
+===================================================================================
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
+[2024-10-05 23:15:51] Model saved as Pennsylvania_auto_arima_model.joblib
+[2024-10-05 23:15:51] Fitting SARIMA model...
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            4     M =           10
+ This problem is unconstrained.
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f=  7.41139D+00    |proj g|=  9.07250D-01
+
+At iterate    5    f=  6.91557D+00    |proj g|=  1.33958D-02
+
+At iterate   10    f=  6.91255D+00    |proj g|=  2.37558D-03
+
+At iterate   15    f=  6.91254D+00    |proj g|=  6.06959D-04
+
+At iterate   20    f=  6.91210D+00    |proj g|=  1.25315D-02
+
+At iterate   25    f=  6.91186D+00    |proj g|=  1.36213D-05
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+    4     26     28      1     0     0   8.949D-07   6.912D+00
+  F =   6.9118558004047772
+
+CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+[2024-10-05 23:15:51] Model saved as Pennsylvania_sarima_model.joblib
+[2024-10-05 23:15:51] Generating predictions...
+[2024-10-05 23:15:51] 2024 Onwards MAPE: 0.0008
+[2024-10-05 23:15:51] 2024 Onwards RMSE: 255.56
+[2024-10-05 23:15:51] 2024 Onwards R-squared: 0.9899
+[2024-10-05 23:15:52] Saving forecast to CSV...
+[2024-10-05 23:15:52] Forecast for the next 12 months after available data:
+[2024-10-05 23:15:52] 2024-09-01    270169.351864
+2024-10-01    270600.099772
+2024-11-01    271145.374901
+2024-12-01    271779.194906
+2025-01-01    272470.139161
+2025-02-01    273191.311287
+2025-03-01    273923.836826
+2025-04-01    274656.661544
+2025-05-01    275384.722443
+2025-06-01    276106.789670
+2025-07-01    276823.639258
+2025-08-01    277536.781444
+Freq: MS, Name: predicted_mean, dtype: float64
+PS C:\Users\dimit> 

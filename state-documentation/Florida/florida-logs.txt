@@ -1,0 +1,98 @@
+PS C:\Users\dimit> & C:/Users/dimit/AppData/Local/Microsoft/WindowsApps/python3.9.exe c:/Github-uploading/customizable-real-estate-market-forecasting-tool/florida-zhvi-sarima.py
+[2024-10-05 21:39:16] Loading dataset...
+[2024-10-05 21:39:16] Preprocessing data...
+[2024-10-05 21:39:16] Running Auto ARIMA...
+[2024-10-05 21:39:20]                                SARIMAX Results
+==============================================================================
+Dep. Variable:                      y   No. Observations:                  296
+Model:               SARIMAX(2, 2, 2)   Log Likelihood               -2158.061
+Date:                Sat, 05 Oct 2024   AIC                           4326.122
+Time:                        21:39:20   BIC                           4344.540
+Sample:                    01-01-2000   HQIC                          4333.498
+                         - 08-01-2024
+Covariance Type:                  opg
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+ar.L1          1.2818      0.097     13.154      0.000       1.091       1.473
+ar.L2         -0.5432      0.050    -10.767      0.000      -0.642      -0.444
+ma.L1         -1.0007      0.099    -10.153      0.000      -1.194      -0.808
+ma.L2          0.3421      0.043      8.004      0.000       0.258       0.426
+sigma2      9.167e+04   3761.355     24.372      0.000    8.43e+04     9.9e+04
+===================================================================================
+Ljung-Box (L1) (Q):                  93.79   Jarque-Bera (JB):              3169.65
+Prob(Q):                              0.00   Prob(JB):                         0.00
+Heteroskedasticity (H):               2.18   Skew:                            -0.29
+Prob(H) (two-sided):                  0.00   Kurtosis:                        19.07
+===================================================================================
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
+[2024-10-05 21:39:20] Model saved as Florida_auto_arima_model.joblib
+[2024-10-05 21:39:20] Fitting SARIMA model...
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            5     M =           10
+ This problem is unconstrained.
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f=  8.04635D+00    |proj g|=  1.83624D+00
+
+At iterate    5    f=  7.32982D+00    |proj g|=  7.20618D-02
+
+At iterate   10    f=  7.32597D+00    |proj g|=  2.17889D-02
+
+At iterate   15    f=  7.31243D+00    |proj g|=  3.17431D-02
+
+At iterate   20    f=  7.31169D+00    |proj g|=  7.50500D-03
+
+At iterate   25    f=  7.31167D+00    |proj g|=  3.09675D-03
+
+At iterate   30    f=  7.31103D+00    |proj g|=  4.09269D-02
+
+At iterate   35    f=  7.29687D+00    |proj g|=  4.79170D-02
+
+At iterate   40    f=  7.29075D+00    |proj g|=  2.44863D-03
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+    5     44     51      1     0     0   4.215D-05   7.291D+00
+  F =   7.2907468576150656
+
+CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+[2024-10-05 21:39:21] Model saved as Florida_sarima_model.joblib
+[2024-10-05 21:39:21] Generating predictions...
+[2024-10-05 21:39:21] 2024 Onwards MAPE: 0.0006
+[2024-10-05 21:39:21] 2024 Onwards RMSE: 345.67
+[2024-10-05 21:39:21] 2024 Onwards R-squared: 0.8748
+[2024-10-05 21:39:21] Saving forecast to CSV...
+[2024-10-05 21:39:21] Forecast for the next 12 months after available data:
+[2024-10-05 21:39:21] 2024-09-01    393743.328627
+2024-10-01    392836.954280
+2024-11-01    392014.508263
+2024-12-01    391256.980651
+2025-01-01    390537.079447
+2025-02-01    389830.147002
+2025-03-01    389119.400870
+2025-04-01    388396.722229
+2025-05-01    387660.819856
+2025-06-01    386914.448466
+2025-07-01    386161.840409
+2025-08-01    385406.924493
+Freq: MS, Name: predicted_mean, dtype: float64
+PS C:\Users\dimit> 

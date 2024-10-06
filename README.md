@@ -33,16 +33,16 @@ This project provides a customizable real estate market forecasting tool that us
 
 The project includes SARIMA models for several states, each demonstrating high accuracy in forecasting ZHVI trends. The accuracy rates and R-squared values for the state models, sorted from highest to lowest accuracy, are as follows:
 
-1. Pennsylvania: 99.2% (R-squared: 0.9899)
-2. New York: 99.0% (R-squared: 0.9943)
-3. Texas: 99.0% (R-squared: 0.8341)
-4. North Carolina: 98.9% (R-squared: 0.9555)
-5. Washington: 98.8% (R-squared: 0.9636)
-6. Massachusetts: 98.5% (R-squared: 0.9811)
-7. New Jersey: 98.4% (R-squared: 0.9902)
-8. California: 98.1% (R-squared: 0.9184)
-9. Illinois: 98.0% (R-squared: 0.9741)
-10. Florida: 99.4% (R-squared: 0.8748)
+1. New York: 99.43%
+2. New Jersey: 99.02%
+3. Pennsylvania: 98.99%
+4. Massachusetts: 98.11%
+5. Illinois: 97.41%
+6. Washington: 96.36%
+7. North Carolina: 95.55%
+8. California: 91.84%
+9. Florida: 87.48%
+10. Texas: 83.41%
 
 These accuracy rates and R-squared values are derived from the model's performance on the test set, which is a portion of the data held out during training to evaluate the model's ability to generalize to unseen data.
 

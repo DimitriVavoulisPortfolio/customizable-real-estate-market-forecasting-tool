@@ -35,7 +35,7 @@ This project is a customizable real estate market forecasting tool that uses SAR
 
 ## Model Performance
 
-The project includes SARIMA models for several states, each demonstrating high accuracy in forecasting ZHVI trends. The accuracy rates and R-squared values for the state models, sorted from highest to lowest accuracy, are as follows:
+The project includes SARIMA models for several states, each demonstrating high accuracy in forecasting ZHVI trends. The accuracy rates for the state models, sorted from highest to lowest accuracy, are as follows:
 
 1. New York: 99.43%
 2. New Jersey: 99.02%
@@ -48,7 +48,7 @@ The project includes SARIMA models for several states, each demonstrating high a
 9. Florida: 87.48%
 10. Texas: 83.41%
 
-These accuracy rates and R-squared values are derived from the model's performance on the test set, which is a portion of the data held out during training to evaluate the model's ability to generalize to unseen data.
+These accuracy rates are derived from the model's performance on the test set, which is a portion of the data held out during training to evaluate the model's ability to generalize to unseen data.
 
 ## Usage Guide
 

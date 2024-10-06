@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project provides a customizable real estate market forecasting tool that uses SARIMA (Seasonal AutoRegressive Integrated Moving Average) models to predict Zillow Home Value Index (ZHVI) trends at different geographical levels, such as states and cities. The tool is designed to be a low-cost market research solution that offers the nuance of an actual market researcher, making it valuable for real estate businesses, investors, and analysts.
+This project provides a customizable real estate market forecasting tool that uses SARIMA (Seasonal AutoRegressive Integrated Moving Average) models to predict Zillow Home Value Index (ZHVI) trends at different geographical levels, such as states and cities. 
 
 ### Key Features
 
@@ -12,6 +12,7 @@ This project provides a customizable real estate market forecasting tool that us
 - Data processing and model training pipeline
 - Comprehensive testing and evaluation of models
 - Structured project for easy navigation and understanding
+- Usage of Dataset with monthly updates(https://www.kaggle.com/datasets/robikscube/zillow-home-value-index)
 
 ## Project Structure
 
